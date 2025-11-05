@@ -1,0 +1,32 @@
+name: Bug report
+description: Report a bug in site, tools, or curriculum build
+labels: [bug]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the bug and the expected behavior.
+      placeholder: "When I open /path, the page crashes with error X..."
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Minimal steps to reproduce the issue.
+      placeholder: |
+        1. Go to ...
+        2. Click ...
+        3. See error ...
+  - type: input
+    id: url
+    attributes:
+      label: URL (if applicable)
+      placeholder: "https://theogreproject.org/path"
+  - type: textarea
+    id: env
+    attributes:
+      label: Environment
+      description: OS/Browser/Node version, and any relevant tooling details.
+      placeholder: "Ubuntu 24.04, Chrome 120, Node 20.11"

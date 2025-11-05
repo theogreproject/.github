@@ -1,0 +1,32 @@
+name: Content request
+description: Request a lesson/module/template or changes to existing content
+labels: [content]
+body:
+  - type: input
+    id: module
+    attributes:
+      label: Module/Lesson ID
+      description: e.g., ADV-201-L03
+      placeholder: "ADV-201-L03"
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: Goals, outline, and target audience.
+      placeholder: |
+        - Goals:
+        - Outline:
+        - Target audience:
+    validations:
+      required: true
+  - type: textarea
+    id: license
+    attributes:
+      label: Linked resources & licenses
+      description: Only free resources; include license information and attributions.
+      placeholder: |
+        - Resource:
+        - License:
+        - Attribution:

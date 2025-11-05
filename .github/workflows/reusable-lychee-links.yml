@@ -1,0 +1,18 @@
+name: Link check (reusable)
+
+on:
+  workflow_call:
+    inputs:
+      args:
+        description: Lychee CLI arguments
+        type: string
+        default: "--verbose --no-progress --exclude-mail --accept '200..=299,403' ."
+
+jobs:
+  lychee:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: lycheeverse/lychee-action@v2
+        with:
+          args: ${{ inputs.args }}

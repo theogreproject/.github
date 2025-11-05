@@ -1,0 +1,15 @@
+name: Inclusive language (alex) (reusable)
+
+on:
+  workflow_call: {}
+
+jobs:
+  alex:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npx --yes alex@11 . || true
+        # Initially non-blocking. Remove "|| true" later to enforce.

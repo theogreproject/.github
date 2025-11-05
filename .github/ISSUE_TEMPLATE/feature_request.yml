@@ -1,0 +1,27 @@
+name: Feature request
+description: Propose a feature for site or tools
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+      description: What user problem does this address?
+      placeholder: "Learners can’t easily find X; maintainers lack Y..."
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Scope, acceptance criteria, and risks.
+      placeholder: |
+        - Scope:
+        - Out of scope:
+        - Acceptance criteria:
+        - Risks:
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes / alternatives
+      description: Alternatives considered, dependencies, or rollout plan.
